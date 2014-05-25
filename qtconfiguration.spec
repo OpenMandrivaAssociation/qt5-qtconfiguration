@@ -36,6 +36,7 @@ Library for settings API with change notifications for Qt.
 Summary:	Development files for %{name}
 Group:		Development/C++
 Requires:	%{libname} = %{EVRD}
+Provides:	%{name}-devel = %{EVRD}
 
 %description -n %{libname}
 Development files and headers for %{name}.
