@@ -1,3 +1,7 @@
+%define major 0
+%define libname %mklibname %{name} %{major}
+%define develname %mklibname %{name} -d
+
 Summary:	Settings API with change notifications for Qt
 Name:		qtconfiguration
 Version:	0.2.1
@@ -20,6 +24,21 @@ prog %{name} = {
 %description
 Settings API with change notifications for Qt.
 
+%package -n %{libname}
+Summary:	Main library for %{name}
+Group:		System/Libraries
+
+%description -n %{libname}
+Library for settings API with change notifications for Qt.
+
+%package -n %{develname}
+Summary:	Development files for %{name}
+Group:		Development/C++
+Requires:	%{libname} = %{EVRD}
+
+%description -n %{libname}
+Development files and headers for %{name}.
+
 %prep
 %setup -q
 
@@ -30,4 +49,15 @@ Settings API with change notifications for Qt.
 %install
 %makeinstall_std -C build
 
-%files
+%files -n %{libname}
+%{_libdir}/libqtconfiguration.so.%{major}*
+
+%files -n %{develname}
+%dir %{_includedir}/QtConfiguration
+%dir %{_libdir}/cmake/QtConfiguration
+%{_includedir}/QtConfiguration/QConfiguration
+%{_includedir}/QtConfiguration/QConfigurationBackend
+%{_includedir}/QtConfiguration/*.h
+%{_libdir}/cmake/QtConfiguration/*.cmake
+%{_libdir}/libqtconfiguration.so
+
