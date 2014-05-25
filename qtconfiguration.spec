@@ -8,6 +8,7 @@ URL:		https://github.com/mauios/qtconfiguration
 Source0:	http://downloads.sourceforge.net/project/mauios/hawaii/%{name}/%{name}-%{version}.tar.gz
 BuildRequires:	cmake
 BuildRequires:	qt5-devel
+BuildRequires:	dconf
 
 %track
 prog %{name} = {
