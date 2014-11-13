@@ -4,7 +4,7 @@
 
 Summary:	Settings API with change notifications for Qt
 Name:		qtconfiguration
-Version:	0.2.1
+Version:	0.3.0
 Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/Other
