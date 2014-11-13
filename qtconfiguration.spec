@@ -14,6 +14,7 @@ Source1:	qtconfiguration.rpmlintrc
 BuildRequires:	cmake
 BuildRequires:	qt5-devel
 BuildRequires:	pkgconfig(dconf)
+Requires:	%{libname} = %{EVRD}
 
 %track
 prog %{name} = {
@@ -51,6 +52,12 @@ Development files and headers for %{name}.
 %install
 %makeinstall_std -C build
 
+%files
+%dir %{_libdir}/hawaii/qml/Hawaii/Configuration
+%{_libdir}/hawaii/qml/Hawaii/Configuration/libqmlconfigurationplugin.so
+%{_libdir}/hawaii/qml/Hawaii/Configuration/plugins.qmltypes
+%{_libdir}/hawaii/qml/Hawaii/Configuration/qmldir
+
 %files -n %{libname}
 %{_libdir}/libqtconfiguration.so.%{major}*
 
@@ -59,7 +66,7 @@ Development files and headers for %{name}.
 %dir %{_libdir}/cmake/QtConfiguration
 %{_includedir}/QtConfiguration/QConfiguration
 %{_includedir}/QtConfiguration/QConfigurationBackend
+%{_includedir}/QtConfiguration/QStaticConfiguration
 %{_includedir}/QtConfiguration/*.h
 %{_libdir}/cmake/QtConfiguration/*.cmake
 %{_libdir}/libqtconfiguration.so
-
