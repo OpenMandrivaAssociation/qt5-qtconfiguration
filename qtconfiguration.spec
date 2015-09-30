@@ -15,6 +15,7 @@ BuildRequires:	cmake
 BuildRequires:	qmake5
 BuildRequires:	qt5-qtbase-macros
 BuildRequires:	pkgconfig(Qt5Core)
+BuildRequires:	pkgconfig(Qt5Qml)
 BuildRequires:	pkgconfig(dconf)
 Requires:	%{libname} = %{EVRD}
 
