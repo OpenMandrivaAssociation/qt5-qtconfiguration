@@ -4,15 +4,15 @@
 
 Summary:	Settings API with change notifications for Qt
 Name:		qtconfiguration
-Version:	0.3.0
-Release:	3
+Version:	0.3.1
+Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/Other
 URL:		https://github.com/mauios/qtconfiguration
 Source0:	http://downloads.sourceforge.net/project/mauios/hawaii/%{name}/%{name}-%{version}.tar.gz
 Source1:	qtconfiguration.rpmlintrc
 BuildRequires:	cmake
-BuildRequires:	qt5-devel
+BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(dconf)
 Requires:	%{libname} = %{EVRD}
 
