@@ -12,6 +12,7 @@ URL:		https://github.com/mauios/qtconfiguration
 Source0:	http://downloads.sourceforge.net/project/mauios/hawaii/%{name}/%{name}-%{version}.tar.gz
 Source1:	qtconfiguration.rpmlintrc
 BuildRequires:	cmake
+BuildRequires:	qmake5
 BuildRequires:	qt5-qtbase-macros
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(dconf)
