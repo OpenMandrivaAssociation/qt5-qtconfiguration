@@ -5,7 +5,7 @@
 Summary:	Settings API with change notifications for Qt
 Name:		qtconfiguration
 Version:	0.3.1
-Release:	1
+Release:	2
 License:	LGPLv2+
 Group:		Graphical desktop/Other
 URL:		https://github.com/mauios/qtconfiguration
